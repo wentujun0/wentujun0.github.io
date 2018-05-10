@@ -334,7 +334,30 @@
       
         
           
-            
+            <h1 id="在WIn10系统中配置Tomcat环境变量"><a href="#在WIn10系统中配置Tomcat环境变量" class="headerlink" title="在WIn10系统中配置Tomcat环境变量"></a>在WIn10系统中配置Tomcat环境变量</h1><p>在配置Tomcat环境变量前先配置jdk，确保jdk无误后再配置Tomcat。</p>
+<p>注意：Tomcat以及JDK都需要安装在纯英文目录下！！</p>
+<p>Tomcat安装目录：<img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510085152.png" alt="QQ截图20180510085152"></p>
+<h2 id="方法一、在“此电脑”上配置环境变量（常有错误）"><a href="#方法一、在“此电脑”上配置环境变量（常有错误）" class="headerlink" title="方法一、在“此电脑”上配置环境变量（常有错误）"></a>方法一、在“此电脑”上配置环境变量（常有错误）</h2><p>环境变量：</p>
+<p>系统变量上点击”新建“,在弹出的新建系统变量提示框：</p>
+<p>“变量名”栏填写：CATALINA_HOME（要大写，HOME前有下划线） </p>
+<p>“变量值”栏填写：D:\software\apache-tomcat-7.0.84</p>
+<p>点击确定。</p>
+<h4 id="配置Path变量"><a href="#配置Path变量" class="headerlink" title="配置Path变量"></a>配置Path变量</h4><p>选中Path变量，点击右下角“编辑”。弹出框中选择“新建”，在光标闪烁的空白处填写： </p>
+<p>D:\software\apache-tomcat-7.0.84</p>
+<p>即：文件路径名+bin，一路“确定”退出环境变量配置。 配置完成</p>
+<h2 id="方法二、在Tomcat配置文件上配置环境变量"><a href="#方法二、在Tomcat配置文件上配置环境变量" class="headerlink" title="方法二、在Tomcat配置文件上配置环境变量"></a>方法二、在Tomcat配置文件上配置环境变量</h2><p>用方法一配置环境变量，常常出错，而且还会有错误”JRE_HOME”</p>
+<p>The JRE_HOME environment variable is not defined correctl</p>
+<p>This environment variable is needed to run this program</p>
+<h4 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法:"></a>配置方法:</h4><p>1、tomcat/bin/setclasspath.bat 用记事本打开 </p>
+<p>2、添加添加两行代码java根目录和Jre根目录</p>
+<p>set JAVA_HOME=D:\software\jdk1.7.0_80</p>
+<p>set JRE_HOME=D:\software\jdk1.7.0_80</p>
+<p>配置完成如图：</p>
+<p><img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510091020.png" alt="QQ截图20180510091020"></p>
+<h2 id="检测配置是否成功"><a href="#检测配置是否成功" class="headerlink" title="检测配置是否成功"></a>检测配置是否成功</h2><p>运行/bin下的starup，并且可以在浏览器中浏览 localhost:8080 </p>
+<p>有如下：<img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510091356.png" alt="QQ截图20180510091356"></p>
+<p>配置完成</p>
+
           
         
       
