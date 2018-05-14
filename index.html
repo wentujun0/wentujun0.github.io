@@ -252,6 +252,1092 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/14/HTML学习-5-表单标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/14/HTML学习-5-表单标签/" itemprop="url">HTML学习-5-表单标签</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T09:16:30+08:00">
+                2018-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/14/HTML学习-5-表单标签/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/14/HTML学习-5-表单标签/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h2><p>表单标签： 表单标签的作用是用于提交数据给服务器的。</p>
+<p><form></form>常用属性：</p>
+<pre><code>action: 该属性是用于指定提交数据的地址。
+method： 指定表单的提交方式。
+        get : 默认使用的提交方式。  提交的数据会显示在地址栏上。
+        post ：  提交的数据不会显示在地址栏上。
+</code></pre><p>注意： 表单项的数据如果需要提交到服务器上面，那么表单项必须要有name的属性值。</p>
+<p>文本框<input>类型:</p>
+<pre><code>1、text 文本
+2、password 密码
+3、search 搜索
+4、checkbox 复选框，用户打对号
+5、radio 单选框，
+6、image  生成图片按钮
+7、email 检测电子邮箱
+8、file 上传控件
+9、submit 按钮
+不能输入的文本框，必须写value值,否则无法传值
+</code></pre><p>下拉菜单<br>    <select><br>        <option></option><br>    </select></p>
+<p>文本域</p>
+<textarea></textarea>
+
+<h4 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表单标签&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;form action=&quot;http://www.baidu.com&quot; method=&quot;post&quot;&gt;</span><br><span class="line">    	&lt;!-- 文本输入框 单行--&gt;</span><br><span class="line">    	用户名：&lt;input name=&quot;userName&quot; type=&quot;text&quot;/&gt;&lt;br/&gt;</span><br><span class="line">        &lt;!-- 密码框 --&gt;</span><br><span class="line">		密码：&lt;input name=&quot;password&quot; type=&quot;password&quot;/&gt;&lt;br/&gt;</span><br><span class="line">        &lt;!-- 单选框  --&gt;</span><br><span class="line">        性别： 男&lt;input checked=&quot;true&quot; value=&quot;man&quot;  name=&quot;sex&quot; type=&quot;radio&quot;/&gt;   女&lt;input name=&quot;sex&quot; value=&quot;woman&quot; type=&quot;radio&quot;/&gt;&lt;br/&gt;</span><br><span class="line">        &lt;!-- 下拉框 --&gt;</span><br><span class="line">        来自的城市：&lt;select name=&quot;city&quot;&gt;	</span><br><span class="line">                    &lt;option value=&quot;BJ&quot;&gt;北京&lt;/option&gt;</span><br><span class="line">                    &lt;option value=&quot;SH&quot;&gt;上海&lt;/option&gt;</span><br><span class="line">                    &lt;option value=&quot;GZ&quot;&gt;广州&lt;/option&gt;</span><br><span class="line">                    &lt;option value=&quot;SZ&quot;&gt;深圳&lt;/option&gt;</span><br><span class="line">                &lt;/select&gt;&lt;br/&gt;</span><br><span class="line">        &lt;!-- 复选框  同一组的复选框name的属性值要一致 --&gt;</span><br><span class="line">       兴趣爱好：java &lt;input value=&quot;java&quot; name=&quot;hobit&quot;  checked=&quot;checked&quot; type=&quot;checkbox&quot; /&gt;javascript &lt;input type=&quot;checkbox&quot; value=&quot;javascript&quot; name=&quot;hobit&quot; /&gt;android &lt;input value=&quot;android&quot; name=&quot;hobit&quot; type=&quot;checkbox&quot; /&gt;&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">       &lt;!-- 文件上传框--&gt;</span><br><span class="line">    	大头照：&lt;input name=&quot;image&quot; type=&quot;file&quot; /&gt;&lt;br/&gt;</span><br><span class="line">        </span><br><span class="line">    	个人简介:</span><br><span class="line"></span><br><span class="line">        &lt;!-- 文本域 --&gt;</span><br><span class="line">        &lt;textarea  name=&quot;intro&quot; rows=&quot;10&quot; cols=&quot;30&quot;&gt;&lt;/textarea&gt;&lt;br/&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;!-- 提交按钮 --&gt;</span><br><span class="line">        &lt;input type=&quot;submit&quot; value=&quot;注册&quot;/&gt;</span><br><span class="line">    	&lt;!--  重置按钮 --&gt;</span><br><span class="line">    	&lt;input type=&quot;reset&quot; value=&quot;重置&quot;/&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-5-表单标签/QQ截图20180514095003.png" alt="QQ截图20180514095003"></p>
+<h4 id="案例2-利用表格标签给表单写框架"><a href="#案例2-利用表格标签给表单写框架" class="headerlink" title="案例2 利用表格标签给表单写框架"></a>案例2 利用表格标签给表单写框架</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表单作业&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;table align=&quot;center&quot; border=&quot;1px&quot;&gt;</span><br><span class="line">		&lt;form action=&quot;http://www.wentujun.work&quot; method=&quot;post&quot;&gt;</span><br><span class="line">			&lt;td&gt;用户名:&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;userName&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;	</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;密码：&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;userPass&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;性别：&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;男&lt;input type=&quot;radio&quot; name=&quot;userSex&quot; value=&quot;man&quot;&gt;女&lt;input type=&quot;radio&quot; name=&quot;userSex&quot; value=&quot;woman&quot; checked=&quot;checked&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;爱好&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;篮球&lt;input type=&quot;checkbox&quot; name=&quot;userLove&quot; value=&quot;basketball&quot;&gt;足球&lt;input type=&quot;checkbox&quot; name=&quot;userLove&quot; value=&quot;football&quot;&gt;羽毛球&lt;input type=&quot;checkbox&quot; name=&quot;userLove&quot; value=&quot;badminton&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;来自哪个城市&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;&lt;select name=&quot;userCity&quot;&gt;</span><br><span class="line">					&lt;option value=&quot;SH&quot;&gt;上海&lt;/option&gt;</span><br><span class="line">					&lt;option value=&quot;HB&quot;&gt;河北&lt;/option&gt;</span><br><span class="line">					&lt;option value=&quot;BJ&quot;&gt;北京&lt;/option&gt;</span><br><span class="line">					&lt;option value=&quot;GZ&quot;&gt;广州&lt;/option&gt;</span><br><span class="line">					&lt;option value=&quot;TJ&quot;&gt;天津&lt;/option&gt;</span><br><span class="line">				&lt;/select&gt;</span><br><span class="line">			&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;大头照&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;up&quot; value=&quot;浏览..&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;自我介绍&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;&lt;textarea name=&quot;inpor&quot; rows=&quot;3&quot; cols=&quot;30&quot;&gt;&lt;/textarea&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;&lt;input type=&quot;submit&quot; name=&quot;userSub&quot; value=&quot;提交数据&quot;&gt;&lt;input type=&quot;reset&quot; name=&quot;userRes&quot; value=&quot;重置&quot;&gt;&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;/form&gt;</span><br><span class="line">	&lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-5-表单标签/QQ截图20180514095020.png" alt="QQ截图20180514095020"></p>
+<h5 id="Get和Post的提交方式的区别"><a href="#Get和Post的提交方式的区别" class="headerlink" title="Get和Post的提交方式的区别"></a>Get和Post的提交方式的区别</h5><p><img src="/2018/05/14/HTML学习-5-表单标签/QQ截图20180514095334.png" alt="QQ截图20180514095334"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/14/HTML学习-4-表格标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/14/HTML学习-4-表格标签/" itemprop="url">HTML学习-4-表格标签</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T09:11:57+08:00">
+                2018-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/14/HTML学习-4-表格标签/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/14/HTML学习-4-表格标签/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><table></table>
+
+<p>表格使用到的标签：<br>        <table> 表格<br>            <tr>    行  （几行）<br>            <td>    单元格   （几列）<br>            <th>     表头   默认的样式是居中，加粗。<br>            <caption>  表格的标题</caption></th></td></tr></table></p>
+<p>表格常用的属性：<br>        border  设置表格的边框<br>            width : 设置表格的宽度<br>            height: 设置表格的高度的。<br>         colspan: 设置单元格占据指定的列数。<br>        rowspan : 设置单元格占据指定的行数。</p>
+<h3 id="表格案例1、"><a href="#表格案例1、" class="headerlink" title="表格案例1、"></a>表格案例1、</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表格标签&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;table align=&quot;center&quot; border=&quot;1px&quot; bordercolor=&quot;#0066CC&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;</span><br><span class="line">    	&lt;caption&gt;期末考试成绩表&lt;/caption&gt;   &lt;!--表格标题 --&gt;</span><br><span class="line">        &lt;thead&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;th&gt;姓名&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;分数&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;人品&lt;/th&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        &lt;/thead&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">    	&lt;tr&gt;</span><br><span class="line">        	&lt;td rowspan=&quot;2&quot;&gt;凡江&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;98&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;优&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;  </span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;100&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;优&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;     </span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        	&lt;td&gt;居东东&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;99&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;非常好&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">            &lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">                &lt;td&gt;综合测评&lt;/td&gt;</span><br><span class="line">                &lt;td colspan=&quot;2&quot;&gt;非常好&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        </span><br><span class="line">         &lt;/tbody&gt;</span><br><span class="line">   &lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-4-表格标签/QQ截图20180514093702.png" alt="QQ截图20180514093702"></p>
+<h3 id="表格案例2"><a href="#表格案例2" class="headerlink" title="表格案例2"></a>表格案例2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表格测试&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;table align=&quot;center&quot; border=&quot;1px&quot; &gt;</span><br><span class="line">	&lt;caption&gt;表格元素&lt;/caption&gt;</span><br><span class="line">		&lt;thead&gt;</span><br><span class="line">			&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">				&lt;th width=&quot;100px&quot;&gt;元素名称&lt;/th&gt;</span><br><span class="line">				&lt;th width=&quot;300px&quot;&gt;说明&lt;/th&gt;</span><br><span class="line">			&lt;/tr&gt;</span><br><span class="line">		&lt;/thead&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;table&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示表格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt; </span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;thead&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示标题行,可以没有存在thead&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;tbody&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示表格主体，一个表格至少要存在一个tbody，也可以存在多个。&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;tfoot&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示表脚，可以不存在tfoot&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;tr&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一行单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;th&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示标题行单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;td&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;col&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一列&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;colgroup&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一组列&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;caption&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示表格标题&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot; &gt;</span><br><span class="line">			&lt;td colspan=&quot;2&quot;&gt;完成&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;hr/&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-4-表格标签/QQ截图20180514093753.png" alt="QQ截图20180514093753"></p>
+<h3 id="表格以及和HTML框架的联系"><a href="#表格以及和HTML框架的联系" class="headerlink" title="表格以及和HTML框架的联系"></a>表格以及和HTML框架的联系</h3><p><img src="/2018/05/14/HTML学习-4-表格标签/表格.png" alt="表格"></p>
+<p>与框架的联系，详细的框架见HTML学习3</p>
+<p><img src="/2018/05/14/HTML学习-4-表格标签/表格组成部分.png" alt="表格组成部分"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/14/HTML学习-3-简单使用用的标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/14/HTML学习-3-简单使用用的标签/" itemprop="url">HTML学习-3-简单使用用的标签</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T08:48:49+08:00">
+                2018-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/14/HTML学习-3-简单使用用的标签/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/14/HTML学习-3-简单使用用的标签/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="实体标签-即类似转义字符"><a href="#实体标签-即类似转义字符" class="headerlink" title="实体标签(即类似转义字符)"></a>实体标签(即类似转义字符)</h2><p>因为&gt;&lt; 等一些符号在html页面中是有着特殊含义，这些字符如果需要在页面中显示，这时候就应该使用实体标签。</p>
+<p>​    不用死记，会查阅资料就行</p>
+<p>常用的实体字符:(注意后面的分号)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">		空格      &amp;nbsp;</span><br><span class="line">    小于号     &amp;lt;</span><br><span class="line">    大于号    &amp;gt;</span><br><span class="line">-----------------------------</span><br><span class="line">    人民币    &amp;yen；</span><br><span class="line">    版权      &amp;copy;</span><br><span class="line">    商标      &amp;reg;</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;段落标签是使用&amp;lt;p&amp;gt;标&quot;签&quot;&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">该毛衣的价格：&amp;yen;298&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">&lt;&lt;深入javaweb&gt;&gt;该书版权归属于：&amp;copy;文兔君</span><br><span class="line"></span><br><span class="line">&lt;hr/&gt;</span><br><span class="line"></span><br><span class="line">本次活动最后的解释器归属于：&amp;reg;NOBUG</span><br><span class="line">&lt;hr/&gt;</span><br><span class="line">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;有一些符号如&amp;gt;&amp;lt;在html页面中是有着特殊含义的，这些字符如果需要在页面显示，这时候应该使用实体标签。其实就是Java中的转义字符。</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-3-简单使用用的标签/QQ截图20180514085454.png" alt="QQ截图20180514085454"></p>
+<h2 id="媒体标签"><a href="#媒体标签" class="headerlink" title="媒体标签"></a>媒体标签</h2><p>1、<embed><br>        hidden ： 设置隐藏插件是否隐藏。<br>        src ：用于指定音乐的路径</p>
+<p>2、<marquee></marquee> 飘动标签<br>       direction : 指定飘动的方向<br>        scrollamount : 指定飘动的速度。<br>        loop   :指定飘动的次数</p>
+<h2 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h2><p> <a> 超链接标签</a></p>
+<p>作用:</p>
+<p>1、可以用于链接资源。</p>
+<p>2、锚点点位.</p>
+<p>​    （1）、首先编写一个锚点  锚点的格式： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a name=&quot;锚点名字&quot;&gt; 数据&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>​    （2）、使用a标签 的herf属性连接到锚点出。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#锚点的名字&quot;&gt;返回&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>属性:</p>
+<pre><code>href  : 用于指定链接的资源
+          target: 设置打开新资源的目标。    _Blank 在独立的窗口上打开新资源   _self 在当前窗口打开新资源 
+</code></pre><p>a标签的原理:</p>
+<p>1、a标签的href属性值如果是以http开头的，那么浏览器会马上启动http解释器去解释该网址，首先<br>    会在本地机器去找一个hosts文件， 如果在hosts文件上该域名没有对应的主机，那么浏览器就去到对应的<br>    dns服务器去寻找该域名对应的主机号。如果找到了对应的主机，那么该请求就会发给对应的主机。</p>
+<p>2、如果a标签的href属性值没有以任何协议开头，那么浏览就会启动file协议解释器去解释该资源路径。</p>
+<p>3、如果a标签的href属性值并不是以http开始，而且其他 的一些协议，那么这时候浏览器就回去到我们本地                                                                的注册表中去查找是否有处理这种协议 的应用程序，如果有，那么马上启动该应用程序处理该协议。</p>
+<p>协议:</p>
+<p>邮件 的协议： mailTo<br>    迅雷的协议： thunder</p>
+<p>file: file协议（文件协议）这种协议主要是用于搜索本地机器的资源文件的。</p>
+<h3 id="HTML5改良的a元素"><a href="#HTML5改良的a元素" class="headerlink" title="HTML5改良的a元素"></a>HTML5改良的a元素</h3><p>html5中，对a元素添加download属性，再添加该属性后，用户点击超链接时，将直接下载超链接所指向的资源文件，而不是在浏览器中打开连接所指向的目标地址。现在Chrome14、Opera18以及firefox20以上版本的浏览器均支持该属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;11.jpg&quot; download=&quot;路飞.jpg&quot;&gt;&lt;img src=&quot;11.jpg&quot; width=&quot;100&quot; height=&quot;50&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h2><p>img标签常用的属性:</p>
+<p>​    width： 设置图片宽度</p>
+<p>​     height  设置图片高度</p>
+<p>​     alt:    如果图片资源无法找到，那么就显示对应的文字对图片进行说明。</p>
+<p>热点图:<br>    最好借助DW（当然其他的工具也可以）进行定位。<br>  然而现在感觉没啥卵用。<img src="/2018/05/14/HTML学习-3-简单使用用的标签/QQ截图20180514091108.png" alt="QQ截图20180514091108"></p>
+<h1 id="补充HTML框架"><a href="#补充HTML框架" class="headerlink" title="补充HTML框架"></a>补充HTML框架</h1><p>框架标签:</p>
+<p>frameSet ： 一个frameSet可以把一个页面切割成多份。只能按照行或者列切割。</p>
+<p>​     frame   不能被切割的。 frame是位于frameSet中。</p>
+<pre><code>iframe:  在一个网页中分隔一部分的位置显示另外一个网页的的信息。
+</code></pre><p> 注意： frameSet标签不能用于body标签体内容。</p>
+<h4 id="index"><a href="#index" class="headerlink" title="index"></a>index</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;index&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">	&lt;frameset  rows=&quot;20%,70%,*&quot; &gt;</span><br><span class="line">    	&lt;frame  src=&quot;top.html&quot; /&gt;</span><br><span class="line">        &lt;frameset cols=&quot;20%,40%,*&quot;&gt;</span><br><span class="line">        	&lt;frame src=&quot;left.html&quot; /&gt;</span><br><span class="line">            &lt;frame name=&quot;center&quot; src=&quot;center.html&quot;/&gt;</span><br><span class="line">            &lt;frame name=&quot;test&quot; src=&quot;test.html&quot;&gt;&lt;/frame&gt;</span><br><span class="line">        &lt;/frameset&gt;</span><br><span class="line">    	&lt;frame src=&quot;foot.html&quot;/&gt;</span><br><span class="line">    &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="Top"><a href="#Top" class="headerlink" title="Top"></a>Top</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;top&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div align=&quot;center&quot;&gt;&lt;font color=&quot;#FF0000&quot; size=&quot;30px&quot;&gt;博客的logo&lt;/font&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="center"><a href="#center" class="headerlink" title="center"></a>center</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;center&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	该博客创建于2018年，致力于帮助广大的程序员朋友不断的提升自己的专业技能，也是朋友们广开言论的地方......</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="left"><a href="#left" class="headerlink" title="left"></a>left</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;left&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;dl&gt;</span><br><span class="line">	&lt;dt&gt;功能介绍&lt;/dt&gt;</span><br><span class="line">	&lt;dd&gt;&lt;a href=&quot;#&quot; target=&quot;center&quot; &gt;博客简介&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;产品介绍&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;博主荣耀&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;招聘英才&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;联系我们&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="test"><a href="#test" class="headerlink" title="test"></a>test</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;pre&gt;</span><br><span class="line">                             静夜思（李白）</span><br><span class="line">                    床前明月光，疑是地上霜。</span><br><span class="line">                    举头望明月，低头思故乡。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&lt;br/&gt;&lt;hr/&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&lt;a href=&quot;index.html&quot; target=&quot;in&quot;&gt;index&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;in&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;iframe src=&quot;http://www.wentujun.work&quot; width=&quot;600&quot; height=&quot;500&quot; name=&quot;in&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="foot"><a href="#foot" class="headerlink" title="foot"></a>foot</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;foot&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div align=&quot;center&quot;&gt;</span><br><span class="line">    	合作伙伴：百度、 腾讯、 微软、甲骨文....&lt;br/&gt;</span><br><span class="line">        友情链接： &lt;a href=&quot;http://www.tedu.cn/&quot; target=&quot;_blank&quot;&gt;达内&lt;/a&gt;、&lt;a href=&quot;http://zs.bdqn.cn/&quot; target=&quot;_blank&quot; &gt; 青鸟&lt;/a&gt;、&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot; &gt;百度&lt;/a&gt;...&lt;br/&gt;</span><br><span class="line">        联系方式：020-123456</span><br><span class="line">		版权归属于： &amp;reg;传智播客</span><br><span class="line">    	</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/14/HTML学习-3-简单使用用的标签/QQ截图20180514093057.png" alt="QQ截图20180514093057"></p>
+<p>iframe案例(test页面)</p>
+<p><img src="/2018/05/14/HTML学习-3-简单使用用的标签/QQ截图20180514093222.png" alt="QQ截图20180514093222"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/12/HTML学习-2-常用标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/12/HTML学习-2-常用标签/" itemprop="url">HTML学习(2)--常用标签</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T21:39:01+08:00">
+                2018-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/12/HTML学习-2-常用标签/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/12/HTML学习-2-常用标签/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HTML常用标签"><a href="#HTML常用标签" class="headerlink" title="HTML常用标签"></a>HTML常用标签</h1><p>html的标签作用：用于描述一个网页的结构的。</p>
+<p>如果需要操作数据的样式：通过标签的属性操作的。 </p>
+<p>标签的类型：<br>    1.、双标签，有开始标签与结束标签。  </p><p> </p>  需要把网页的数据内容封装到标签中。<p></p>
+<p>2、 单标签，开始标签与结束标签都是在一个标签体内的。  比如： <hr>    功能单一不需要封装数据到标签中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、&lt;h1&gt;~&lt;h6&gt; 表示是一个标题</span><br><span class="line">2、&lt;p&gt;   段落标签</span><br><span class="line">3、&lt;hr/&gt;  水平线标签</span><br><span class="line">4、&lt;br/&gt;  换行标签</span><br><span class="line"></span><br><span class="line">&lt;!--注意使用--&gt;</span><br><span class="line">5、&lt;sub&gt;  下标</span><br><span class="line"> 	 &lt;sup&gt;  上标</span><br><span class="line"></span><br><span class="line">6、&lt;pre&gt;  原样标签： 原样标签会保留空格和换行符(最好保持一致，即都用Tab或都用 空格)</span><br><span class="line"></span><br><span class="line">7、&lt;ol&gt; &lt;li&gt; 有序的列表标签、</span><br><span class="line">	 &lt;ul&gt; &lt;li&gt; 无序的列表标签。</span><br><span class="line"> </span><br><span class="line"> 8、项目列表标签(dl dt dd)</span><br><span class="line"> </span><br><span class="line">9、行内标签(span)     </span><br><span class="line">	 块标签&lt;div&gt;    div标签的内容会独立占一行。</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<p>1~4，代码<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214617.png" alt="QQ截图20180512214617"></p>
+<p>浏览</p>
+<p><img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214643.png" alt="QQ截图20180512214643"></p>
+<p>5，代码<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214658.png" alt="QQ截图20180512214658"></p>
+<p>浏览<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214708.png" alt="QQ截图20180512214708"></p>
+<p>6，代码<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214722.png" alt="QQ截图20180512214722"></p>
+<p>浏览<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214730.png" alt="QQ截图20180512214730"></p>
+<p>7，代码</p>
+<p><img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214756.png" alt="QQ截图20180512214756"></p>
+<p>浏览</p>
+<p><img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214805.png" alt="QQ截图20180512214805"></p>
+<p>8，代码</p>
+<p><img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512214815.png" alt="QQ截图20180512214815"></p>
+<p>浏览</p>
+<p><img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512220015.png" alt="QQ截图20180512220015"></p>
+<p>9，代码<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512220054.png" alt="QQ截图20180512220054"></p>
+<p>浏览<img src="/2018/05/12/HTML学习-2-常用标签/QQ截图20180512220102.png" alt="QQ截图20180512220102"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/12/HTML学习-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/12/HTML学习-1/" itemprop="url">HTML学习(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T21:09:57+08:00">
+                2018-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/12/HTML学习-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/12/HTML学习-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="软件的结构："><a href="#软件的结构：" class="headerlink" title="软件的结构："></a>软件的结构：</h2><p>1、C/S(Client  Server)结构的软件： 比如（QQ、 极品飞车、 飞信 、 迅雷）</p>
+<p>cs结构的软件的缺点：更新的时候需要用户下载更新包然后再安装，程序员则需要开发客户端与服务端。</p>
+<p>cs结构软件的优点： 减轻服务端的压力，而且可以大量保存数据在客户端</p>
+<p>2、B/S（Browser Server）结构的软件：比如（微博 、 webQQ 、 web飞信、 web迅雷）</p>
+<p>优点：软件版本升级的时候不需要用户下载更新包，直接更新服务器的程序即可。程序员则只需要开发服务端而已。</p>
+<p>缺点：增加了服务端的压力，bs结构的软件不能保存大量的 数据在用户机上。</p>
+<h2 id="网站的类别"><a href="#网站的类别" class="headerlink" title="网站的类别:"></a>网站的类别:</h2><p>静态网站: 静态网页中的数据都是写死的，如果需要修改网页的内容是需要直接修改网页的代码。 是没有数据库提供数据给它。（比如某些博客）</p>
+<p>动态网站: 动态网站的数据是来自于数据库的，背后是有一个后台程序管理页面中数据的。（比如教务系统，某些网上的系统）</p>
+<h1 id="HTML语言"><a href="#HTML语言" class="headerlink" title="HTML语言"></a>HTML语言</h1><h2 id="HTML超文本标记语言（HyperText-markup-language）"><a href="#HTML超文本标记语言（HyperText-markup-language）" class="headerlink" title="HTML超文本标记语言（HyperText   markup language）"></a>HTML超文本标记语言（HyperText   markup language）</h2><p>超文本：页面的数据可以通过标签改变样式，而且可以通过超链接直接跳到下一个页面。 </p>
+<p>标记：html是通过标签来定义的语言，代码是由标签组成 。</p>
+<p>平台无关, 只要安装了浏览器，就可以通过浏览器来解析数据。</p>
+<h2 id="HTML语言的结构"><a href="#HTML语言的结构" class="headerlink" title="HTML语言的结构"></a>HTML语言的结构</h2><p>​     </p>
+<pre><code>   &lt;html&gt;    html语言的根标签.
+
+           &lt;head&gt;&lt;/head&gt; 网页的头信息
+
+     &lt;body&gt;&lt;/body&gt; 网页的体部分
+
+&lt;/html&gt;
+</code></pre><p>html的注释：　<!--  注释的内容  --></p>
+<h2 id="头信息作用的介绍"><a href="#头信息作用的介绍" class="headerlink" title="头信息作用的介绍"></a>头信息作用的介绍</h2><p>1、可以设置网页的标题。</p>
+<p>2、可以通知浏览使用指定的码表解释html页面。</p>
+<p>3、设置搜索关键字。</p>
+<p><img src="/2018/05/12/HTML学习-1/HTML学习(1" alt="QQ截图20180512213425">/QQ截图20180512213425.png)</p>
+<h2 id="网页的内容是写在body标签体内的"><a href="#网页的内容是写在body标签体内的" class="headerlink" title="网页的内容是写在body标签体内的"></a>网页的内容是写在body标签体内的</h2><p><img src="/2018/05/12/HTML学习-1/HTML学习(1" alt="QQ截图20180512213600">/QQ截图20180512213600.png)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/xml基础学习（2）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/xml基础学习（2）/" itemprop="url">xml基础学习（2）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T20:15:04+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/10/xml基础学习（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/10/xml基础学习（2）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="3-xml解析"><a href="#3-xml解析" class="headerlink" title="3.xml解析"></a>3.xml解析</h1><h2 id="3-1-引入"><a href="#3-1-引入" class="headerlink" title="3.1 引入"></a>3.1 引入</h2><p>xml文件除了给开发者看，更多的情况使用程序读取xml文件的内容。这叫做xml解析 </p>
+<h2 id="3-2-xml解析方式"><a href="#3-2-xml解析方式" class="headerlink" title="3.2 xml解析方式"></a>3.2 xml解析方式</h2><p>DOM解析</p>
+<p>SAX解析</p>
+<p>原理不同的只有这两种</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/xml基础学习（1）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/xml基础学习（1）/" itemprop="url">xml基础学习（1）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T19:49:38+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/10/xml基础学习（1）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/10/xml基础学习（1）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1、xml入门"><a href="#1、xml入门" class="headerlink" title="1、xml入门"></a>1、xml入门</h1><h2 id="1-1-引入"><a href="#1-1-引入" class="headerlink" title="1.1 引入"></a>1.1 引入</h2><p>HTML: 负责网页的结构        </p>
+<p> CSS： 负责网页的样式（美观）</p>
+<p>  Javascript： 负责在浏览器端与用户进行交互。</p>
+<p>​      html    负责静态的网页制作的语言</p>
+<p>xml可以自定义标签，如</p>
+<p><abc>abc标签</abc>  自定义标签 </p>
+<h2 id="1-2-html与xml的区别"><a href="#1-2-html与xml的区别" class="headerlink" title="1.2 html与xml的区别"></a>1.2 html与xml的区别</h2><p>HTML：</p>
+<p>HyperText Markup Languae（超文本标记语言），标签是w3c组成指定，固定的，约100来个 ，负责网页的结构 </p>
+<p>xml：</p>
+<p>Extend Markup Languge（可扩展标签语言） ,标签由开发者自己制定的（要按照一定的语法定义） , 1）描述带关系的数据（作为软件的配置文件）: 包 含与被包含的关系 ,2）作为数据的载体（存储数据，小型的“数据库”） </p>
+<h1 id="2、xml语法"><a href="#2、xml语法" class="headerlink" title="2、xml语法"></a>2、xml语法</h1><p>xml文件以xml后缀名结尾。 </p>
+<p>xml文件需要使用xml解析器去解析。浏览器内置了xml解析器。 </p>
+<h2 id="2-1-标签"><a href="#2-1-标签" class="headerlink" title="2.1 标签"></a>2.1 标签</h2><p>语法： <student></student>  开始标签  标签体内容  结束标签</p>
+<p>  1）<student> 或 <student></student> 空标签。没有标签体内容</student></p>
+<p>  2）xml标签名称区分大小写。</p>
+<p> 3）xml标签一定要正确配对。</p>
+<p> 4）xml标签名中间不能使用空格</p>
+<p> 5）xml标签名不能以数字开头</p>
+<p> <strong>6）注意： 在一个xml文档中，有且仅有一个根标签</strong></p>
+<h2 id="2-2-属性"><a href="#2-2-属性" class="headerlink" title="2.2 属性"></a>2.2 属性</h2><p>语法： <student name="eric">student</student> </p>
+<p>注意： 1）属性值必须以引号包含，不能省略，也不能单双引号混用！！！</p>
+<p>​         2）一个标签内可以有多个属性，但不能出现重复的属性名！！！ </p>
+<h2 id="2-3-注释"><a href="#2-3-注释" class="headerlink" title="2.3 注释"></a>2.3 注释</h2><p>语言： <!--  xml注释 --> t</p>
+<h2 id="2-4-文档声明"><a href="#2-4-文档声明" class="headerlink" title="2.4 文档声明"></a>2.4 文档声明</h2><p>语法： &lt;?xml version=”1.0” encoding=”utf-8”?&gt; </p>
+<p>version: xml的版本号</p>
+<p>encoding： 解析xml文件时查询的码表（解码过程时查询的码表）</p>
+<p>注意： 1）如果在ecplise工具中开发xml文件，保存xml文件时自动按照文档声明的encoding来保存文 件</p>
+<p>​        2）如果用记事本工具修改xml文件，注意保存xml文件按照文档声明的encoding的码表来保存。 </p>
+<h2 id="2-5-转义字符"><a href="#2-5-转义字符" class="headerlink" title="2.5 转义字符"></a>2.5 转义字符</h2><p>网上查询</p>
+<h2 id="2-6-CDATA块"><a href="#2-6-CDATA块" class="headerlink" title="2.6 CDATA块"></a>2.6 CDATA块</h2><p>作用： 可以让一些需要进行包含特殊字符的内容统一进行原样输出。(是一个代码块，输出方便) </p>
+<p>语法：&lt;![CDATA[ 内容 ]]&gt; </p>
+<p>&lt;![CDATA[   <itcast><br></itcast>   ]]&gt; </p>
+<h2 id="2-7-处理指令"><a href="#2-7-处理指令" class="headerlink" title="2.7 处理指令"></a>2.7 处理指令</h2><p>作用： 告诉xml解析如果解析xml文档 </p>
+<p>案例： &lt;?xml-stylesheet type=”text/css” href=”1.css”?&gt; 告诉xml解析该xml文档引用了哪个css文件 </p>
+<p>But：基本上不会使用</p>
+<p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;03.contact.css&quot;?&gt;</span><br><span class="line">&lt;Contact&gt;</span><br><span class="line">	&lt;contact id=&quot;001&quot;&gt;</span><br><span class="line">		&lt;name&gt;张三&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;10&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;12345&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;zhangsan@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;12345&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">	&lt;contact id=&quot;002&quot;&gt;</span><br><span class="line">		&lt;name&gt;李四&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;11&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;123456&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;lisi@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;123456&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">	&lt;contact id=&quot;003&quot;&gt;</span><br><span class="line">		&lt;name&gt;王五&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;13&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;1234567&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;wangwu@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;1234567&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">&lt;/Contact&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/10/xml基础学习（1）/QQ截图20180510201343.png" alt="QQ截图20180510201343"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -676,568 +1762,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/ssh域名解析问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wen Tujun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NOBUG BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/06/ssh域名解析问题/" itemprop="url">ssh域名解析问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T16:52:34+08:00">
-                2018-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/06/ssh域名解析问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/06/ssh域名解析问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>SSH Warning: the RSA host key for differs from the key for the IP address </p>
-<p>我使用的是阿里云的解析，一开始解析就使用的新手引导，当设置完成后，开始上传博客，但是每次上传博客都会给我发邮件提示，如下：</p>
-<p><img src="/2018/05/06/ssh域名解析问题/DL5N4O7RAN31SM{XRC522Z3.png" alt="DL5N4O7RAN31SM{XRC522Z3"></p>
-<p>在网页上找到了解决的办法即更改域名解析，更改后如下:</p>
-<p><img src="/2018/05/06/ssh域名解析问题/QQ截图20180506165351.png" alt="QQ截图20180506165351"></p>
-<p>如下为找到的网页上cname域名绑定的方法</p>
-<h2 id="CNAME绑定域名"><a href="#CNAME绑定域名" class="headerlink" title="CNAME绑定域名"></a>CNAME绑定域名</h2><p>登录<a href="http://dc.aliyun.com/login/loginx" target="_blank" rel="noopener">阿里云单域名控制台</a>，在<code>域名解析</code>中添加如图所示的解析 </p>
-<p><img src="/2018/05/06/ssh域名解析问题/20160606115330609.png" alt="20160606115330609"></p>
-<p>默认使用阿里云提供的万网DNS服务器。当然你也可以使用<a href="https://www.dnspod.cn/" target="_blank" rel="noopener">DNSPOD</a>提供的DNS服务器，这样可以使你的域名在国外更快速的传播。当你使用DNSPOD提供的DNS服务器时，除了DNS服务器不一样以外，其他的设置（比如A记录和CNAME记录）均相同。以下我们简要分析我们所添加的A记录和CNAME记录的含义。</p>
-<p>在域名解析中，A记录就是直接指定一个IP，CNAME就是重命名，指向另一个域名。</p>
-<ol>
-<li>在阿里云控制台，设置主机记录<code>www</code>，记录类型为A，记录值是IP<code>192.30.252.153</code>。其中<code>192.30.252.153</code>是Github Pages服务器指定的IP地址，访问该IP地址即表示访问Github Pages。</li>
-<li>在阿里云控制台，设置主机记录<code>www</code>，记录类型为A，记录值是IP<code>192.30.252.154</code>。同上。</li>
-<li>在阿里云控制台，设置主机记录<code>@</code>，记录类型为CNAME，记录值是<code>yuanzb.github.io.</code>。表示将<code>http://yuanzb.com</code>这个主域名映射<code>yuanzb.github.io</code>。在这里千万不要忘记记录值中<code>.io</code>后面还有一个点<code>.</code>！</li>
-<li>但是很多时候，我们只想将子域名绑定到博客地址。比如如果你想将<code>blog.yuanzb.com</code>（即博客子域名地址，主域名地址是<code>www.yuanzb.com</code>）映射到yuanzb<code>.github.io</code>，那么在主机记录中就应该填写<code>blog</code>，记录类型为CNAME，记录值是yuanzb<code>.github.io</code>。因为你的主域名已经默认为<code>yuanzb.com</code>，所以主域名和主机记录合起来就是<code>blog.yuanzb.com</code>。而且这个时候，你github项目的CNAME文件内容也应该相应的改为<code>blog.yuanzb.com</code>，因为你是想将yuanzb<code>.github.io</code>和<code>blog.yuanzb.com</code>绑定起来，而不是和<code>www.yuanzb.com</code>绑定。</li>
-<li>如果你想将<code>www.yuanzb.com</code>（即主域名地址）映射到yuanzb<code>.github.io</code>，那么主机记录就是<code>www</code>,记录类型是A，记录值是具体的IP地址（在我们这个例子中是<code>192.30.252.153</code>、<code>192.30.252.154</code>）。因为你的主域名已经默认为<code>yuanzb.com</code>，所以主域名和主机记录合起来就是<code>www.yuanzb.com</code>。</li>
-</ol>
-<p>你可以将多个域名都映射到<code>xxxxx.github.io</code>之类的你自己的站点上，但是需要新建不同内容的CNAME文件。</p>
-<p>注意，<code>.me</code>已经是顶级域名（和<code>.com</code>、<code>.org</code>等域名是同一级的），所以需要使用A记录进行域名解析。</p>
-<p>第二步的目的是，告诉所有DNS服务器，对于<code>yuanzb.me</code>的访问都会被重定向到<code>yuanzb.github.io</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/测试专用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wen Tujun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NOBUG BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/06/测试专用/" itemprop="url">测试专用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T15:30:44+08:00">
-                2018-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/06/测试专用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/06/测试专用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>这是只是想测试一下我的偶像欧文的照片可不可以使用啦啦</p>
-<p><img src="/2018/05/06/测试专用/凯里·欧文.jpg" alt="凯里·欧文"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/Hexo使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wen Tujun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NOBUG BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/06/Hexo使用/" itemprop="url">Hexo使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T12:04:07+08:00">
-                2018-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/06/Hexo使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/06/Hexo使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​    很开心第一天配置并且部署了我的第一个博客，虽然遇到了形形色色的问题，不过在我耐心的查找之下，全部被解决了，很开心！</p>
-<p>​    先介绍几个Hexo常用的命令，#后面为注释</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g #完整命令为hexo generate，用于生成静态文件</span><br><span class="line">$ hexo s #完整命令为hexo server，用于启动服务器，主要用来本地预览</span><br><span class="line">$ hexo d #完整命令为hexo deploy，用于将本地文件发布到github上</span><br><span class="line">$ hexo n #完整命令为hexo new，用于新建一篇文章</span><br></pre></td></tr></table></figure>
-<p>引用其他博主的一个Hexo的配置文件介绍</p>
-<p>D:\Hexo_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: http://hexo.io/docs/configuration.html</span><br><span class="line">## Source: https://github.com/hexojs/hexo/</span><br><span class="line"></span><br><span class="line"># Site	这下面的几项配置都很简单，你看我的博客就知道分别是什么意思</span><br><span class="line">title: Chillax blog	#博客名</span><br><span class="line">subtitle: Goals determine what you are going to be	#副标题</span><br><span class="line">description: Goals determine what you are going to be #用于搜索，没有直观表现</span><br><span class="line">author: huangjunhui	#作者</span><br><span class="line">language: zh-CN	#语言</span><br><span class="line">timezone: 	#时区，此处不填写，hexo会以你目前电脑的时区为默认值</span><br><span class="line"></span><br><span class="line"># URL	暂不配置，使用默认值</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://opiece.me  #域名</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Directory		暂不配置，使用默认值</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"># Writing	文章布局等，使用默认值</span><br><span class="line">new_post_name: :title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"># Category &amp; Tag	暂不配置，使用默认值</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Date / Time format	时间格式，使用默认值</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># Pagination	</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10	#每页显示的文章数，0表示不分页</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"># Extensions	插件配置，暂时不配置</span><br><span class="line">## Plugins: http://hexo.io/plugins/</span><br><span class="line">## Themes: http://hexo.io/themes/</span><br><span class="line">plugins:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">theme: light	#使用的主题，即：E:\myblog\themes文件夹下的主题文件夹名</span><br><span class="line"></span><br><span class="line">feed:	#之后配置rss会用，使用如下配置即可</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20  </span><br><span class="line"></span><br><span class="line"># Deployment	用于部署到github，之前已经配置过</span><br><span class="line">## Docs: http://hexo.io/docs/deployment.html</span><br><span class="line"></span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/huangjunhui/huangjunhui.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>先介绍到这，附上球星欧文照片:</p>
-<p><img src="/2018/05/06/Hexo使用/凯里·欧文-1525580157988.jpg" alt="凯里·欧文"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wen Tujun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NOBUG BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-04T14:50:07+08:00">
-                2018-05-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/04/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/04/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1285,7 +1816,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1298,7 +1829,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
