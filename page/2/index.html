@@ -252,6 +252,611 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/xml基础学习-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/xml基础学习-1/" itemprop="url">xml基础学习-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T19:49:38+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/10/xml基础学习-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/10/xml基础学习-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1、xml入门"><a href="#1、xml入门" class="headerlink" title="1、xml入门"></a>1、xml入门</h1><h2 id="1-1-引入"><a href="#1-1-引入" class="headerlink" title="1.1 引入"></a>1.1 引入</h2><p>HTML: 负责网页的结构        </p>
+<p> CSS： 负责网页的样式（美观）</p>
+<p>  Javascript： 负责在浏览器端与用户进行交互。</p>
+<p>​      html    负责静态的网页制作的语言</p>
+<p>xml可以自定义标签，如</p>
+<p><abc>abc标签</abc>  自定义标签 </p>
+<h2 id="1-2-html与xml的区别"><a href="#1-2-html与xml的区别" class="headerlink" title="1.2 html与xml的区别"></a>1.2 html与xml的区别</h2><p>HTML：</p>
+<p>HyperText Markup Languae（超文本标记语言），标签是w3c组成指定，固定的，约100来个 ，负责网页的结构 </p>
+<p>xml：</p>
+<p>Extend Markup Languge（可扩展标签语言） ,标签由开发者自己制定的（要按照一定的语法定义） , 1）描述带关系的数据（作为软件的配置文件）: 包 含与被包含的关系 ,2）作为数据的载体（存储数据，小型的“数据库”） </p>
+<h1 id="2、xml语法"><a href="#2、xml语法" class="headerlink" title="2、xml语法"></a>2、xml语法</h1><p>xml文件以xml后缀名结尾。 </p>
+<p>xml文件需要使用xml解析器去解析。浏览器内置了xml解析器。 </p>
+<h2 id="2-1-标签"><a href="#2-1-标签" class="headerlink" title="2.1 标签"></a>2.1 标签</h2><p>语法： <student></student>  开始标签  标签体内容  结束标签</p>
+<p>  1）<student> 或 <student></student> 空标签。没有标签体内容</student></p>
+<p>  2）xml标签名称区分大小写。</p>
+<p> 3）xml标签一定要正确配对。</p>
+<p> 4）xml标签名中间不能使用空格</p>
+<p> 5）xml标签名不能以数字开头</p>
+<p> <strong>6）注意： 在一个xml文档中，有且仅有一个根标签</strong></p>
+<h2 id="2-2-属性"><a href="#2-2-属性" class="headerlink" title="2.2 属性"></a>2.2 属性</h2><p>语法： <student name="eric">student</student> </p>
+<p>注意： 1）属性值必须以引号包含，不能省略，也不能单双引号混用！！！</p>
+<p>​         2）一个标签内可以有多个属性，但不能出现重复的属性名！！！ </p>
+<h2 id="2-3-注释"><a href="#2-3-注释" class="headerlink" title="2.3 注释"></a>2.3 注释</h2><p>语言： <!--  xml注释 --> t</p>
+<h2 id="2-4-文档声明"><a href="#2-4-文档声明" class="headerlink" title="2.4 文档声明"></a>2.4 文档声明</h2><p>语法： &lt;?xml version=”1.0” encoding=”utf-8”?&gt; </p>
+<p>version: xml的版本号</p>
+<p>encoding： 解析xml文件时查询的码表（解码过程时查询的码表）</p>
+<p>注意： 1）如果在ecplise工具中开发xml文件，保存xml文件时自动按照文档声明的encoding来保存文 件</p>
+<p>​        2）如果用记事本工具修改xml文件，注意保存xml文件按照文档声明的encoding的码表来保存。 </p>
+<h2 id="2-5-转义字符"><a href="#2-5-转义字符" class="headerlink" title="2.5 转义字符"></a>2.5 转义字符</h2><p>网上查询</p>
+<h2 id="2-6-CDATA块"><a href="#2-6-CDATA块" class="headerlink" title="2.6 CDATA块"></a>2.6 CDATA块</h2><p>作用： 可以让一些需要进行包含特殊字符的内容统一进行原样输出。(是一个代码块，输出方便) </p>
+<p>语法：&lt;![CDATA[ 内容 ]]&gt; </p>
+<p>&lt;![CDATA[   <itcast><br></itcast>   ]]&gt; </p>
+<h2 id="2-7-处理指令"><a href="#2-7-处理指令" class="headerlink" title="2.7 处理指令"></a>2.7 处理指令</h2><p>作用： 告诉xml解析如果解析xml文档 </p>
+<p>案例： &lt;?xml-stylesheet type=”text/css” href=”1.css”?&gt; 告诉xml解析该xml文档引用了哪个css文件 </p>
+<p>But：基本上不会使用</p>
+<p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;03.contact.css&quot;?&gt;</span><br><span class="line">&lt;Contact&gt;</span><br><span class="line">	&lt;contact id=&quot;001&quot;&gt;</span><br><span class="line">		&lt;name&gt;张三&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;10&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;12345&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;zhangsan@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;12345&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">	&lt;contact id=&quot;002&quot;&gt;</span><br><span class="line">		&lt;name&gt;李四&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;11&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;123456&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;lisi@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;123456&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">	&lt;contact id=&quot;003&quot;&gt;</span><br><span class="line">		&lt;name&gt;王五&lt;/name&gt;</span><br><span class="line">		&lt;age&gt;13&lt;/age&gt;</span><br><span class="line">		&lt;phone&gt;1234567&lt;/phone&gt;</span><br><span class="line">		&lt;email&gt;wangwu@qq.com&lt;/email&gt;</span><br><span class="line">		&lt;qq&gt;1234567&lt;/qq&gt;</span><br><span class="line">	&lt;/contact&gt;</span><br><span class="line">&lt;/Contact&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/10/xml基础学习-1/QQ截图20180510201343.png" alt="QQ截图20180510201343"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/" itemprop="url">Win10下配置tomcat7及在Tomcat配置文件中修改java_home</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T22:23:27+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="在WIn10系统中配置Tomcat环境变量"><a href="#在WIn10系统中配置Tomcat环境变量" class="headerlink" title="在WIn10系统中配置Tomcat环境变量"></a>在WIn10系统中配置Tomcat环境变量</h1><p>在配置Tomcat环境变量前先配置jdk，确保jdk无误后再配置Tomcat。</p>
+<p>注意：Tomcat以及JDK都需要安装在纯英文目录下！！</p>
+<p>Tomcat安装目录：<img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510085152.png" alt="QQ截图20180510085152"></p>
+<h2 id="方法一、在“此电脑”上配置环境变量（常有错误）"><a href="#方法一、在“此电脑”上配置环境变量（常有错误）" class="headerlink" title="方法一、在“此电脑”上配置环境变量（常有错误）"></a>方法一、在“此电脑”上配置环境变量（常有错误）</h2><p>环境变量：</p>
+<p>系统变量上点击”新建“,在弹出的新建系统变量提示框：</p>
+<p>“变量名”栏填写：CATALINA_HOME（要大写，HOME前有下划线） </p>
+<p>“变量值”栏填写：D:\software\apache-tomcat-7.0.84</p>
+<p>点击确定。</p>
+<h4 id="配置Path变量"><a href="#配置Path变量" class="headerlink" title="配置Path变量"></a>配置Path变量</h4><p>选中Path变量，点击右下角“编辑”。弹出框中选择“新建”，在光标闪烁的空白处填写： </p>
+<p>D:\software\apache-tomcat-7.0.84</p>
+<p>即：文件路径名+bin，一路“确定”退出环境变量配置。 配置完成</p>
+<h2 id="方法二、在Tomcat配置文件上配置环境变量"><a href="#方法二、在Tomcat配置文件上配置环境变量" class="headerlink" title="方法二、在Tomcat配置文件上配置环境变量"></a>方法二、在Tomcat配置文件上配置环境变量</h2><p>用方法一配置环境变量，常常出错，而且还会有错误”JRE_HOME”</p>
+<p>The JRE_HOME environment variable is not defined correctl</p>
+<p>This environment variable is needed to run this program</p>
+<h4 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法:"></a>配置方法:</h4><p>1、tomcat/bin/setclasspath.bat 用记事本打开 </p>
+<p>2、添加添加两行代码java根目录和Jre根目录</p>
+<p>set JAVA_HOME=D:\software\jdk1.7.0_80</p>
+<p>set JRE_HOME=D:\software\jdk1.7.0_80</p>
+<p>配置完成如图：</p>
+<p><img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510091020.png" alt="QQ截图20180510091020"></p>
+<h2 id="检测配置是否成功"><a href="#检测配置是否成功" class="headerlink" title="检测配置是否成功"></a>检测配置是否成功</h2><p>运行/bin下的starup，并且可以在浏览器中浏览 localhost:8080 </p>
+<p>有如下：<img src="/2018/05/09/Win10下配置tomcat7及在Tomcat配置文件中修改java-home/QQ截图20180510091356.png" alt="QQ截图20180510091356"></p>
+<p>配置完成</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/Win10下配置jdk1-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/09/Win10下配置jdk1-7/" itemprop="url">Win10下配置jdk1.7</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T21:47:44+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/09/Win10下配置jdk1-7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/09/Win10下配置jdk1-7/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="jdk1-7在win10环境下的配置"><a href="#jdk1-7在win10环境下的配置" class="headerlink" title="jdk1.7在win10环境下的配置"></a>jdk1.7在win10环境下的配置</h1><p>昨天同学的电脑重装了，他的电脑里面装好了jdk，但是环境没有配置，<u>注意这个时候是可以打开ｅｃｌｉｐｓｅ的并且可以编译运行。</u></p>
+<p>ＪＲＥ：JRE是Java Runtime Environment缩写，指Java运行环境，是<a href="https://baike.baidu.com/item/Sun" target="_blank" rel="noopener">Sun</a>的产品。运行JAVA程序所必须的环境的集合，包含JVM标准实现及Java核心类库。</p>
+<p>注意由于Microsoft对Java的支持不完全，请不要使用IE自带的<a href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA" target="_blank" rel="noopener">虚拟机</a>来运行 Applet，务必安装一个JRE或JDK。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">windows想知道自己电脑中是否有JRE很简单：</span><br><span class="line">1，开始-&gt;运行，输入cmd，进入命令行模式；</span><br><span class="line">2，输入&quot;java -version&quot;；</span><br><span class="line">3，如果显示</span><br><span class="line">&apos;java&apos; is not recognized as an internal or external command,</span><br><span class="line">operable program or batch file.</span><br><span class="line">就是没有安装JRE环境。</span><br><span class="line">如果显示</span><br><span class="line">java version &quot;1.5.0_06&quot;</span><br><span class="line">Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_06-b05)</span><br><span class="line">Java HotSpot(TM) Client VM (build 1.5.0_06-b05, mixed mode, sharing)</span><br><span class="line">说明安装了JRE，版本是1.5.0_06。</span><br></pre></td></tr></table></figure>
+<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><p>右键“我的电脑”，打开“属性”</p>
+<p><img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509220955.png" alt="QQ截图20180509220955"></p>
+<p>打开“高级系统设置”<img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509221025.png" alt="QQ截图20180509221025"></p>
+<p>打开”环境变量“</p>
+<p>（1）先配置“JAVA-HOME”，（变量值里面为“你的jdk的路径”）如图</p>
+<p><img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509221607.png" alt="QQ截图20180509221607"></p>
+<p>（2）再配置“PATH”,（或者“%JAVA_HOME%\bin”）如图<img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509221524.png" alt="QQ截图20180509221524"></p>
+<p>检验是否配置好</p>
+<p>CMD中java -version</p>
+<p><img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509221119.png" alt="QQ截图20180509221119"></p>
+<p>java<img src="/2018/05/09/Win10下配置jdk1-7/QQ截图20180509222123.png" alt="QQ截图20180509222123"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/URI和URL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/06/URI和URL/" itemprop="url">URI和URL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T20:36:57+08:00">
+                2018-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/06/URI和URL/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/06/URI和URL/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="URI和URL"><a href="#URI和URL" class="headerlink" title="URI和URL"></a>URI和URL</h1><h2 id="URL"><a href="#URL" class="headerlink" title="URL :"></a>URL :</h2><p>URL（Uniform Resource Locator,统一资源定位符）。URL正是使用Web浏览器等访问Web页面时需要输入的网页地址。比如</p>
+<p><img src="/2018/05/06/URI和URL/QQ截图20180506204220.png" alt="QQ截图20180506204220">  </p>
+<p><a href="http://www.wentujun.work就是URL" target="_blank" rel="noopener">www.wentujun.work就是URL</a></p>
+<h2 id="URI："><a href="#URI：" class="headerlink" title="URI："></a>URI：</h2><p>统一资源标识符（Uniform Resource Identifier）<img src="/2018/05/06/URI和URL/1525610663996.jpg" alt="1525610663996"></p>
+<p><img src="/2018/05/06/URI和URL/1525610694873.jpg" alt="1525610694873"></p>
+<h2 id="URI格式"><a href="#URI格式" class="headerlink" title="URI格式"></a>URI格式</h2><p>表示指定的URI，要使用涵盖全部必要信息的绝对URI、绝对URL以及相对URL。相对URL，是指从浏览器中基本URI处指定的URL，形如/images/avatar.png</p>
+<p><img src="/2018/05/06/URI和URL/1525610874630.jpg" alt="1525610874630"></p>
+<p>片段标识符</p>
+<p>使用片段标识符通常课标记处已获取资源中的子资源（文档内的某个位置）。可选项。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/ssh域名解析问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -852,7 +1457,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -865,7 +1470,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
