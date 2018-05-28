@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="循环语句whilewhile 语句是先测试循环。这意味着退出条件是在执行循环内部的代码之前计算的。因此，循环主体可能根本不被执行。  格式： 123while(判断的条件)&amp;#123;	循环体内容	&amp;#125; 例子： 12345678计算1~100的总和	var num = 1;	var result = 0;	while(num&amp;lt;=100)&amp;#123;		result +=num;">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习-2">
+<meta property="og:url" content="http://yoursite.com/2018/05/27/JavaScript学习-2/index.html">
+<meta property="og:site_name" content="NOBUG BLOG">
+<meta property="og:description" content="循环语句whilewhile 语句是先测试循环。这意味着退出条件是在执行循环内部的代码之前计算的。因此，循环主体可能根本不被执行。  格式： 123while(判断的条件)&amp;#123;	循环体内容	&amp;#125; 例子： 12345678计算1~100的总和	var num = 1;	var result = 0;	while(num&amp;lt;=100)&amp;#123;		result +=num;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/05/27/JavaScript学习-2/QQ截图20180527155031.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/27/JavaScript学习-2/QQ截图20180527155439.png">
+<meta property="og:updated_time" content="2018-05-27T08:33:27.336Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript学习-2">
+<meta name="twitter:description" content="循环语句whilewhile 语句是先测试循环。这意味着退出条件是在执行循环内部的代码之前计算的。因此，循环主体可能根本不被执行。  格式： 123while(判断的条件)&amp;#123;	循环体内容	&amp;#125; 例子： 12345678计算1~100的总和	var num = 1;	var result = 0;	while(num&amp;lt;=100)&amp;#123;		result +=num;">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/27/JavaScript学习-2/QQ截图20180527155031.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/27/JavaScript学习-2/"/>
+
+
+
+
+
+  <title>JavaScript学习-2 | NOBUG BLOG</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a3a0bbecaa65d7ef759ba8e8b403da34";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NOBUG BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Goals determine what you are going to be</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/home" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/JavaScript学习-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript学习-2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T15:27:12+08:00">
+                2018-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/27/JavaScript学习-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/27/JavaScript学习-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h5 id="while"><a href="#while" class="headerlink" title="while"></a>while</h5><p>while 语句是先测试循环。这意味着退出条件是在执行循环内部的代码之前计算的。因此，循环主体可能根本不被执行。 </p>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while(判断的条件)&#123;</span><br><span class="line">	循环体内容	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">计算1~100的总和</span><br><span class="line">	var num = 1;</span><br><span class="line">	var result = 0;</span><br><span class="line">	while(num&lt;=100)&#123;</span><br><span class="line">		result +=num;	</span><br><span class="line">		num++;</span><br><span class="line">	&#125;</span><br><span class="line">	document.write(&quot;结果：&quot;+result);</span><br></pre></td></tr></table></figure>
+<h5 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h5><p>do-while 语句是后测试循环，即退出条件在执行循环内部的代码之后计算。这意味着在计算表达式之前，至少会执行循环主体一次。 </p>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">		循环语句；</span><br><span class="line">	&#125;while(判断条件);</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">计算1~100奇数的总和。</span><br><span class="line">	var num = 1;</span><br><span class="line">	var result = 0;</span><br><span class="line">	do&#123;</span><br><span class="line">		if(num%2!=0)&#123;</span><br><span class="line">			result +=num;</span><br><span class="line">		&#125;</span><br><span class="line">		num++;</span><br><span class="line">	&#125;while(num&lt;=100);</span><br><span class="line">	document.write(&quot;结果：&quot;+result);</span><br></pre></td></tr></table></figure>
+<h5 id="for"><a href="#for" class="headerlink" title="for"></a>for</h5><p>for 语句是前测试循环，而且在进入循环之前，能够初始化变量，并定义循环后要执行的代码。 </p>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(初始化语句; 判断的条件 ; 循环后的语句)&#123;</span><br><span class="line">循环体语句；	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">计算1~100偶数的总和。</span><br><span class="line">var result = 0 ; 	</span><br><span class="line">	for(var i =  1 ; i&lt;=100 ; i++)&#123;</span><br><span class="line">		if(i%2==0)&#123;</span><br><span class="line">			result +=i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">document.write(&quot;结果：&quot;+result);</span><br></pre></td></tr></table></figure>
+<h5 id="for-in语句（强循环语句）"><a href="#for-in语句（强循环语句）" class="headerlink" title="for-in语句（强循环语句）"></a>for-in语句（强循环语句）</h5><p>for 语句是严格的迭代语句，用于枚举对象的属性或者遍历一个数组的元素。 </p>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(var 变量名 in 遍历的目标)&#123;</span><br><span class="line">			循环语句</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//for-in语句遍历数组元素</span><br><span class="line">for(var index in arr)&#123;</span><br><span class="line">	//document.write(arr[index]+&quot;,&quot;);		</span><br><span class="line">	document.write(index+&quot;,&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for-in语句的作用：</p>
+<pre><code>1. 可以用于遍历数组的元素。  注意： 使用for-in语句遍历数组元素的时候遍历出来是数组的下标。注意与java的增强for循环区别
+</code></pre><p>2.可以用于遍历对象的所有属性数据。 注意： 使用for-in语句遍历对象的属性的时候，遍历出来的是对象的属性名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//遍历对象</span><br><span class="line">function Person(id , name)&#123;</span><br><span class="line">		this.id = id;</span><br><span class="line">		this.name = name;	</span><br><span class="line">	&#125;</span><br><span class="line">		//创建一个对象</span><br><span class="line">	var  p = new Person(110,&quot;狗娃&quot;);</span><br><span class="line">	for(var property in p)&#123;</span><br><span class="line">		document.write(p[property]);	</span><br><span class="line">		document.write(property+&quot;,&quot;);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：<img src="/2018/05/27/JavaScript学习-2/QQ截图20180527155031.png" alt="QQ截图20180527155031"></p>
+<h2 id="with语句"><a href="#with语句" class="headerlink" title="with语句"></a>with语句</h2><p>作用：有了 With 语句，在存取对象属性和调用方法时就不用重复指定对象。</p>
+<p>格式：</p>
+<pre><code>with(对象){
+
+}
+</code></pre><p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">	with(document)&#123;</span><br><span class="line">		for(var i = 0 ; i&lt;5; i++)&#123;</span><br><span class="line">			</span><br><span class="line">			for(var j  =0 ; j&lt;=i ; j++)&#123;</span><br><span class="line">				write(&quot;*&amp;nbsp;&quot;);	</span><br><span class="line">			&#125;	</span><br><span class="line">			write(&quot;&lt;br/&gt;&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		write(&quot;&lt;hr/&gt;&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">document.write(&quot;打印正三角形&quot;);</span><br><span class="line">with(document)&#123;</span><br><span class="line">for (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">	for (var j = 5; j &gt;=i ; j--) &#123;</span><br><span class="line">		write(&quot;&amp;nbsp;&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	for (var k = 1; k &lt;= 2*i-1 ; k++) &#123;</span><br><span class="line">		write(&quot;*&quot;);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	write(&quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">write(&quot;&lt;hr&gt;&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">	function Person(id , name)&#123;</span><br><span class="line">		this.id = id;</span><br><span class="line">		this.name = name;	</span><br><span class="line">	&#125;</span><br><span class="line">	//创建一个对象</span><br><span class="line">	var  p = new Person(110,&quot;狗娃&quot;);</span><br><span class="line">	with(p)&#123;</span><br><span class="line">		document.write(&quot;编号：&quot;+id+&quot;&amp;nbsp;&amp;nbsp;&quot;);</span><br><span class="line">		document.write(&quot;姓名：&quot;+ name);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/27/JavaScript学习-2/QQ截图20180527155439.png" alt="QQ截图20180527155439"></p>
+<h1 id="JavaScript函数"><a href="#JavaScript函数" class="headerlink" title="JavaScript函数"></a>JavaScript函数</h1><p>函数主要用来封装具体的功能代码。 </p>
+<p>格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名(形参列表)&#123;</span><br><span class="line">		函数体 ;	</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><span style="color:red">注意：<span>函数的形参是不用声明使用的。 </span></span></p>
+<p><span style="color:red">javascript的函数要注意的细节：<span></span></span></p>
+<p>1.在 javascript中函数 定义形参时是不能使用var关键字声明变量 的。</p>
+<p>2.在javascript中 的函数是没有 返回值类型 的，如果函数需要返回数据给调用者，直接返回即可，如果不需要返回则不返回。</p>
+<p>3.在 javascript中是没有函数 重载 的概念 的，后定义的同名函数会直接覆盖前面定义同名函数。</p>
+<p>4.在javascript中任何的函数内部都隐式的维护了一个arguments（数组）的对象，给函数 传递数据的时候，是会先传递到arguments对象中，然后再由arguments对象分配数据给形参的。</p>
+<h5 id="JavaScript函数练习"><a href="#JavaScript函数练习" class="headerlink" title="JavaScript函数练习"></a>JavaScript函数练习</h5><p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&lt;script style=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">	function showDay()&#123;</span><br><span class="line">		//找到对应 的标签对象。</span><br><span class="line">		var inputObj = document.getElementById(&quot;month&quot;);</span><br><span class="line">		//获取input标签数据,获取的值都是字符串类型，需要转换</span><br><span class="line">		var month = inputObj.value;</span><br><span class="line">		</span><br><span class="line">		month = parseInt(month);//如果获取的值是字符串的转换成NaN</span><br><span class="line">		//alert(month);</span><br><span class="line">		if(month&gt;12||month&lt;1)&#123;</span><br><span class="line">			alert(&quot;对不起，没有该月份&quot;+month);</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		switch(month)&#123;</span><br><span class="line">			case 1:</span><br><span class="line">			case 3:</span><br><span class="line">			case 5:</span><br><span class="line">			case 7:</span><br><span class="line">			case 8:</span><br><span class="line">			case 10:</span><br><span class="line">			case 12:</span><br><span class="line">				alert(&quot;本月是31天&quot;);</span><br><span class="line">				break;</span><br><span class="line">			case 4:</span><br><span class="line">			case 6:</span><br><span class="line">			case 9:</span><br><span class="line">			case 11:</span><br><span class="line">				alert(&quot;本月是30天&quot;);</span><br><span class="line">				break;</span><br><span class="line">			case 2:</span><br><span class="line">				alert(&quot;本月是28天&quot;);</span><br><span class="line">				break;</span><br><span class="line">			default:</span><br><span class="line">				alert(&quot;没有该月份&quot;);</span><br><span class="line">				break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	/* //if语句循环</span><br><span class="line">		if(month==1||month==3||month==5||month==7||month==8||month==10||month==12)&#123;</span><br><span class="line">			alert(&quot;本月是31天&quot;);	</span><br><span class="line">		&#125;else if(month==4||month==6||month==9||month==11)&#123;</span><br><span class="line">			alert(&quot;本月是30天&quot;);	</span><br><span class="line">		&#125;else if(month==2)&#123;</span><br><span class="line">			alert(&quot;本月是28天&quot;);	</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			alert(&quot;没有该月份&quot;);	</span><br><span class="line">		&#125;</span><br><span class="line">		*/</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">	月份:&lt;input id=&quot;month&quot; type=&quot;text&quot; /&gt;&lt;input type=&quot;button&quot; value=&quot;查询&quot; onclick=&quot;showDay()&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/26/JavaScript学习-1/" rel="next" title="JavaScript学习-1">
+                <i class="fa fa-chevron-left"></i> JavaScript学习-1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/27/JavaScript学习-3/" rel="prev" title="JavaScript学习-3">
+                JavaScript学习-3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar/avatar.png"
+                alt="Wen Tujun" />
+            
+              <p class="site-author-name" itemprop="name">Wen Tujun</p>
+              <p class="site-description motion-element" itemprop="description">Goals determine what you are going to be</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#循环语句"><span class="nav-number">1.</span> <span class="nav-text">循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#while"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#do-while"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">for</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for-in语句（强循环语句）"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">for-in语句（强循环语句）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with语句"><span class="nav-number">2.</span> <span class="nav-text">with语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript函数"><span class="nav-number"></span> <span class="nav-text">JavaScript函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript函数练习"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">JavaScript函数练习</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wen Tujun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://Wen Tujun.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/05/27/JavaScript学习-2/';
+          this.page.identifier = '2018/05/27/JavaScript学习-2/';
+          this.page.title = 'JavaScript学习-2';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Wen Tujun.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
