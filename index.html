@@ -252,6 +252,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/12/Java小鸡汤/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/12/Java小鸡汤/" itemprop="url">Java小鸡汤</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-12T09:57:15+08:00">
+                2018-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/12/Java小鸡汤/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/12/Java小鸡汤/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="小思"><a href="#小思" class="headerlink" title="小思"></a>小思</h1><h2 id="Java中的基本数据类型"><a href="#Java中的基本数据类型" class="headerlink" title="Java中的基本数据类型"></a>Java中的基本数据类型</h2><p>java中的基本数据类型与其对应的引用数据类型</p>
+<table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>名称</th>
+<th>引用数据类型(包装类)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>位</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点型</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点型</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔类型</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符类型</td>
+<td>Character</td>
+</tr>
+</tbody>
+</table>
+<p>1、Integer、Byte、Float、Double、Short、Long都属于Number类的子类，Number类本身提供了一系列的返回以上6中基本类型的操作。</p>
+<p>2、Character属于Object的直接子类</p>
+<p>3、Boolean属于Object的直接子类。</p>
+<h2 id="装箱与拆箱"><a href="#装箱与拆箱" class="headerlink" title="装箱与拆箱"></a>装箱与拆箱</h2><p>装箱：将一个基本数据类型变为包装类。</p>
+<p>拆箱：将一个包装类变为基本数据类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class WrapperDemo01&#123;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">    int x= 30;									//声明一个基本数据类型</span><br><span class="line">    Integer i = new Interger(x);  //装箱：将基本数据类型变为包装类</span><br><span class="line">    int temp = i.intValue();		//拆箱:将一个包装类变为基本数据类型</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JDK1.5之后提供了自动的装箱与拆箱操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class WarpperDemo02&#123;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">    Integer i = 30;  //自动装箱成Integer</span><br><span class="line">    Float f = 30.3f;  //自动装箱成Float</span><br><span class="line">    int x =i;				//自动拆箱为int</span><br><span class="line">    float y =f;			//自动拆箱为 float</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Java中数据类型的转换"><a href="#Java中数据类型的转换" class="headerlink" title="Java中数据类型的转换"></a>Java中数据类型的转换</h2><h3 id="1、自动转换"><a href="#1、自动转换" class="headerlink" title="1、自动转换"></a>1、自动转换</h3><p>byte&lt;short&lt;int&lt;long&lt;float&lt;double&lt;string</p>
+<p>小转大（都可以向String类型转换）</p>
+<h3 id="2、强制类型转换"><a href="#2、强制类型转换" class="headerlink" title="2、强制类型转换"></a>2、强制类型转换</h3><p>可能会有类型丢失</p>
+<h3 id="3、特殊的类型转换"><a href="#3、特殊的类型转换" class="headerlink" title="3、特殊的类型转换"></a>3、特殊的类型转换</h3><p>char或者String 转换成int 或者float</p>
+<p>Integer.parseInt(str1);</p>
+<p>Float.parseFloat(str2);</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/27/JavaScript学习-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1786,147 +1982,6 @@ method： 指定表单的提交方式。
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/14/HTML学习-4-表格标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wen Tujun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NOBUG BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/14/HTML学习-4-表格标签/" itemprop="url">HTML学习-4-表格标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T09:11:57+08:00">
-                2018-05-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/14/HTML学习-4-表格标签/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/14/HTML学习-4-表格标签/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><table></table>
-
-<p>表格使用到的标签：<br>        <table> 表格<br>            <tr>    行  （几行）<br>            <td>    单元格   （几列）<br>            <th>     表头   默认的样式是居中，加粗。<br>            <caption>  表格的标题</caption></th></td></tr></table></p>
-<p>表格常用的属性：<br>        border  设置表格的边框<br>            width : 设置表格的宽度<br>            height: 设置表格的高度的。<br>         colspan: 设置单元格占据指定的列数。<br>        rowspan : 设置单元格占据指定的行数。</p>
-<h3 id="表格案例1、"><a href="#表格案例1、" class="headerlink" title="表格案例1、"></a>表格案例1、</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表格标签&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;table align=&quot;center&quot; border=&quot;1px&quot; bordercolor=&quot;#0066CC&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;</span><br><span class="line">    	&lt;caption&gt;期末考试成绩表&lt;/caption&gt;   &lt;!--表格标题 --&gt;</span><br><span class="line">        &lt;thead&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;th&gt;姓名&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;分数&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;人品&lt;/th&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        &lt;/thead&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">    	&lt;tr&gt;</span><br><span class="line">        	&lt;td rowspan=&quot;2&quot;&gt;凡江&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;98&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;优&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;  </span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;100&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;优&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;     </span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        	&lt;td&gt;居东东&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;99&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;非常好&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">            &lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">                &lt;td&gt;综合测评&lt;/td&gt;</span><br><span class="line">                &lt;td colspan=&quot;2&quot;&gt;非常好&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        </span><br><span class="line">         &lt;/tbody&gt;</span><br><span class="line">   &lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/05/14/HTML学习-4-表格标签/QQ截图20180514093702.png" alt="QQ截图20180514093702"></p>
-<h3 id="表格案例2"><a href="#表格案例2" class="headerlink" title="表格案例2"></a>表格案例2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;表格测试&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;table align=&quot;center&quot; border=&quot;1px&quot; &gt;</span><br><span class="line">	&lt;caption&gt;表格元素&lt;/caption&gt;</span><br><span class="line">		&lt;thead&gt;</span><br><span class="line">			&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">				&lt;th width=&quot;100px&quot;&gt;元素名称&lt;/th&gt;</span><br><span class="line">				&lt;th width=&quot;300px&quot;&gt;说明&lt;/th&gt;</span><br><span class="line">			&lt;/tr&gt;</span><br><span class="line">		&lt;/thead&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;table&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示表格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt; </span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;thead&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示标题行,可以没有存在thead&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;tbody&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示表格主体，一个表格至少要存在一个tbody，也可以存在多个。&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;tfoot&lt;/td&gt;</span><br><span class="line">			&lt;td style=&quot;font-size: 20px&quot;&gt;表示表脚，可以不存在tfoot&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;tr&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一行单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;th&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示标题行单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;td&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示单元格&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;col&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一列&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;colgroup&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示一组列&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot;&gt;</span><br><span class="line">			&lt;td&gt;caption&lt;/td&gt;</span><br><span class="line">			&lt;td&gt;表示表格标题&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;tr align=&quot;center&quot; &gt;</span><br><span class="line">			&lt;td colspan=&quot;2&quot;&gt;完成&lt;/td&gt;</span><br><span class="line">		&lt;/tr&gt;</span><br><span class="line">		&lt;hr/&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/05/14/HTML学习-4-表格标签/QQ截图20180514093753.png" alt="QQ截图20180514093753"></p>
-<h3 id="表格以及和HTML框架的联系"><a href="#表格以及和HTML框架的联系" class="headerlink" title="表格以及和HTML框架的联系"></a>表格以及和HTML框架的联系</h3><p><img src="/2018/05/14/HTML学习-4-表格标签/表格.png" alt="表格"></p>
-<p>与框架的联系，详细的框架见HTML学习3</p>
-<p><img src="/2018/05/14/HTML学习-4-表格标签/表格组成部分.png" alt="表格组成部分"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1981,7 +2036,7 @@ method： 指定表单的提交方式。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1994,7 +2049,7 @@ method： 指定表单的提交方式。
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
