@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="python基础小结 一、基本数据类型 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#一、数据类型a = 5b = &amp;apos">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础学习">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/python基础学习/index.html">
+<meta property="og:site_name" content="NOBUG BLOG">
+<meta property="og:description" content="python基础小结 一、基本数据类型 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#一、数据类型a = 5b = &amp;apos">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/09/12/python基础学习/python基础.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/12/python基础学习/python%20中基本数据类型.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/12/python基础学习/序列和索引.jpg">
+<meta property="og:updated_time" content="2018-09-19T00:19:34.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础学习">
+<meta name="twitter:description" content="python基础小结 一、基本数据类型 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#一、数据类型a = 5b = &amp;apos">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/12/python基础学习/python基础.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/12/python基础学习/"/>
+
+
+
+
+
+  <title>python基础学习 | NOBUG BLOG</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a3a0bbecaa65d7ef759ba8e8b403da34";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NOBUG BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Goals determine what you are going to be</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/home" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/python基础学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wen Tujun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NOBUG BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python基础学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T08:29:11+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/12/python基础学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/09/12/python基础学习/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="python基础小结"><a href="#python基础小结" class="headerlink" title="python基础小结"></a>python基础小结</h1><p><img src="/2018/09/12/python基础学习/python基础.jpg" alt=""></p>
+<p>一、基本数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">#一、数据类型</span><br><span class="line"></span><br><span class="line">a = 5</span><br><span class="line">b = &apos;hello world&apos;</span><br><span class="line">c = 11.5</span><br><span class="line">d = 3+5j</span><br><span class="line">#(1)、Number数值类型 整数 实数 复数</span><br><span class="line">#不可改变的类型</span><br><span class="line">a = 5</span><br><span class="line">a = 6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># python 中变量没有类型，数据有类型</span><br><span class="line"></span><br><span class="line">e = f = g =10</span><br><span class="line">h,i,j = 10, 20,&quot;你好&quot;</span><br><span class="line">k = 10</span><br><span class="line">l = 10</span><br><span class="line">m = 10</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(a,b,c,d)</span><br><span class="line">print(e,f,g)</span><br><span class="line">print(h,i,j)</span><br><span class="line">#python变量的本质</span><br><span class="line">#变量存放到内存</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">c/java语言---3个变量，占用3个内存空间</span><br><span class="line">int a = 5;int b = 6;int c = 5;</span><br><span class="line"></span><br><span class="line">python语言---</span><br><span class="line">多个变量的值如果相等，则在内存中只存放一份</span><br><span class="line">m=11 重新分配空间分配空间存放11</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">#查看变量在内存中的地址</span><br><span class="line">m = &quot;strin&quot;</span><br><span class="line">print(id(e),id(f),id(g),id(k),id(l),id(m))</span><br><span class="line"></span><br><span class="line">#数字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#（2）、字符串</span><br><span class="line">#1.不可改变的类型</span><br><span class="line">#2.字符串和Number类型的转换</span><br><span class="line">a = &quot;123&quot;</span><br><span class="line">b = int(a) #字符串---&gt;整数</span><br><span class="line">c = float(a) #字符串---&gt;实数</span><br><span class="line"></span><br><span class="line">print(type(a),type(b),type(c))</span><br><span class="line"></span><br><span class="line">a = 123.56</span><br><span class="line">b = str(a)#number----&gt;String</span><br><span class="line">print(type(a),type(b))</span><br><span class="line"></span><br><span class="line">#3.字符串+/*运算</span><br><span class="line">a = &apos;123&apos;</span><br><span class="line">b = (a*2+a)</span><br><span class="line">print(type(a),type(b))</span><br><span class="line">print(a,b)</span><br><span class="line"></span><br><span class="line">#4.字符串中字符的访问</span><br><span class="line">a = &apos;abcdefg&apos;</span><br><span class="line">print(a[3])#注意:字符串的下标从0开始</span><br><span class="line">print(a[-1])#从后向前数，第一个下标是-1，依次是-2,-3,-4....</span><br><span class="line"></span><br><span class="line">#5.字符串切片</span><br><span class="line">a = &apos;nihaohelloworlddajiahao&apos;</span><br><span class="line">b = a[3:11]#下标为3到下标为11-1的串</span><br><span class="line">print(b)</span><br><span class="line">c = a[3:-1]</span><br><span class="line">print(c)</span><br><span class="line"></span><br><span class="line">#6.字符串常用函数</span><br><span class="line">print(len(a))#字符串长度</span><br><span class="line"></span><br><span class="line">a = &apos;123 456 nihao hello world&apos;</span><br><span class="line">b = a.split(&apos; &apos;)</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line">a = &apos;百度云等与一些面试名额。对于一些较好的学校可以。&apos;</span><br><span class="line">b = a.split(&apos;。&apos;)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/09/12/python基础学习/python 中基本数据类型.jpg" alt=""></p>
+<p>二、序列和索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">#二、列表</span><br><span class="line"># Python列表中可以放任何类型的对象</span><br><span class="line">#1.列表的使用</span><br><span class="line">l = [1,2,3,4,5,6,&apos;nihao&apos;,2.4]</span><br><span class="line">print(type(l),l)</span><br><span class="line"></span><br><span class="line">#2.列表的访问</span><br><span class="line">print(l[2])#下标从0开始</span><br><span class="line">print(l[-2])</span><br><span class="line"></span><br><span class="line">#列表中元素的扩展</span><br><span class="line">l.append(20)</span><br><span class="line">print(l)</span><br><span class="line"></span><br><span class="line">#列表中元素的删除</span><br><span class="line">del l[2]</span><br><span class="line">print(l)</span><br><span class="line"></span><br><span class="line">#3.列表切片</span><br><span class="line">l = [1,2,3,&quot;你好&quot;,&apos;haha&apos;]</span><br><span class="line">a = l[2:4]</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line">#4.列表常用函数</span><br><span class="line">print(len(l))</span><br><span class="line">scores = [20,30,24.5,50,50,20.5]</span><br><span class="line">max_scores = max(scores)</span><br><span class="line">min_scores = min(scores)</span><br><span class="line">print(max_scores,min_scores)</span><br><span class="line"></span><br><span class="line">#列表中列表</span><br><span class="line">l = [1,2,3,[1,&apos;haha&apos;,&apos;hello&apos;,[1,2,3]]]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#三、元组</span><br><span class="line">#1.元组就是一个特殊的列表</span><br><span class="line">#2.元组与列表的区别:元组不允许修改</span><br><span class="line">t = (1,2,3,4,5,)</span><br><span class="line">t1 = t[1:3]</span><br><span class="line">t2 = t[-1]</span><br><span class="line">m = max(t)</span><br><span class="line">mi = min(t)</span><br><span class="line">l = len(t)</span><br><span class="line"></span><br><span class="line">print(t)</span><br><span class="line">print(t1)</span><br><span class="line">print(t2)</span><br><span class="line">print(m)</span><br><span class="line">print(mi)</span><br><span class="line">print(l)</span><br><span class="line"></span><br><span class="line">#四、字典</span><br><span class="line">#1.优势:查询快</span><br><span class="line">#2.字典基本用法</span><br><span class="line"># va = &#123;key:value,key:value,key:value,.......&#125;</span><br><span class="line">d = &#123;&apos;one&apos;:123,&apos;two&apos;:456,&apos;three&apos;:789&#125;</span><br><span class="line">print(d[&apos;one&apos;],d[&apos;three&apos;])#字典使用key值访问</span><br><span class="line">#3.字典可以动态扩展</span><br><span class="line">d[&apos;nihao&apos;]=&apos;Are You Ok?&apos;</span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">#4.字典的删除</span><br><span class="line">del d[&apos;one&apos;]</span><br><span class="line">print(d)</span><br><span class="line"></span><br><span class="line">#5.字典常用方法</span><br><span class="line">keys = d.keys()</span><br><span class="line">vals = d.values()</span><br><span class="line">print(keys,vals)</span><br><span class="line"></span><br><span class="line">print(len(d))</span><br><span class="line"></span><br><span class="line">#五、集合</span><br><span class="line">#1.特点：元素不会重复,没有顺序可言</span><br><span class="line">s = &#123;1,2,3,&apos;nihao&apos;,1,&apos;nihao&apos;&#125;</span><br><span class="line">print(s)</span><br><span class="line">#print(s[1])是不可以的</span><br><span class="line"></span><br><span class="line">#2.去重</span><br><span class="line">l=[]</span><br><span class="line">l.append(123)</span><br><span class="line">l.append(124)</span><br><span class="line">l.append(125)</span><br><span class="line">l.append(123)</span><br><span class="line">l.append(127)</span><br><span class="line">print(l)</span><br><span class="line">s = set(l)#列表转集合 目的:去重</span><br><span class="line">print(s)</span><br><span class="line">l = list(s)#集合转列表 目的：让数据有顺序</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/09/12/python基础学习/序列和索引.jpg" alt=""></p>
+<p>分支语句</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/12/Java小鸡汤/" rel="next" title="Java小鸡汤">
+                <i class="fa fa-chevron-left"></i> Java小鸡汤
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/04/ip基础入门/" rel="prev" title="ip基础入门">
+                ip基础入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar/avatar.png"
+                alt="Wen Tujun" />
+            
+              <p class="site-author-name" itemprop="name">Wen Tujun</p>
+              <p class="site-description motion-element" itemprop="description">Goals determine what you are going to be</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python基础小结"><span class="nav-number">1.</span> <span class="nav-text">python基础小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wen Tujun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://Wen Tujun.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/09/12/python基础学习/';
+          this.page.identifier = '2018/09/12/python基础学习/';
+          this.page.title = 'python基础学习';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Wen Tujun.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
